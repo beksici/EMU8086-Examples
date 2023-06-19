@@ -1,0 +1,29 @@
+
+; You may customize this and other start-up templates; 
+; The location of this template is c:\emu8086\inc\0_com_template.txt
+
+org 100h
+mov cx,8
+mov al,sayi
+
+dongu  
+jcxz exit
+shr al,1
+jc git
+
+
+
+loop dongu
+
+git:
+inc birsayisi
+dec cx
+jmp dongu
+
+
+
+exit:
+ret
+sayi db 11001000b
+birsayisi db 0
+  

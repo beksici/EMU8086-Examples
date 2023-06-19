@@ -1,0 +1,25 @@
+org 100h
+
+mov cx,8
+mov al,sayi
+
+dongu:
+jcxz exit
+shr al,1
+jc git
+
+
+
+loop dongu
+git:
+inc birsayisi
+dec cx
+jmp dongu
+
+exit:
+
+
+ret
+sayi db 1100100b
+birsayisi db 0
+

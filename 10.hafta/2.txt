@@ -1,0 +1,27 @@
+
+; You may customize this and other start-up templates; 
+; The location of this template is c:\emu8086\inc\0_com_template.txt
+
+org 100h
+ 
+lea bx,dizi1
+lea bp,dizi2  
+mov cx,4;4 kez donecek 
+mov SI,0        
+mov di,3
+dongu1:
+     
+     mov al,[bx+di] 
+     mov [bp+SI],al
+     inc SI
+     dec si
+     
+     
+loop dondu1
+       
+ret
+dizi1 db 10,12,14,16
+dizi2 db 4 dup(?)
+
+
+
